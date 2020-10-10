@@ -3,9 +3,12 @@ package sandbox
 import sandbox.chapter01._
 
 object Main extends App {
-  val exercises: Seq[Exercise] = Seq(
+  val ch1: Seq[Exercise] = Seq(
     Exercise1_3,
+    Exercise1_4_6,
   )
 
-  exercises.foreach(_.run)
+  val toRun = ch1
+
+  toRun.foreach(_.run)
 }
