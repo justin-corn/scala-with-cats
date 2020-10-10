@@ -1,8 +1,11 @@
 package sandbox
 
-import cats.instances.string._
-import cats.syntax.semigroup._
+import sandbox.chapter01._
 
 object Main extends App {
-  println("Hello " |+| "Cats!")
+  val exercises: Seq[Exercise] = Seq(
+    Exercise1_3,
+  )
+
+  exercises.foreach(_.run)
 }
