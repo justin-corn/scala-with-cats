@@ -11,13 +11,16 @@ object Exercise2_3 {
     def combine(x: A, y: A): A
   }
 
+  object Semigroup {
+    def apply[A](implicit semigroup: Semigroup[A]) = semigroup
+  }
+
   trait Monoid[A] extends Semigroup[A] {
     def empty: A
   }
 
   object Monoid {
-    def apply[A](implicit monoid: Monoid[A]) =
-      monoid
+    def apply[A](implicit monoid: Monoid[A]) = monoid
   }
 
   object BooleanMonoidInstances {
